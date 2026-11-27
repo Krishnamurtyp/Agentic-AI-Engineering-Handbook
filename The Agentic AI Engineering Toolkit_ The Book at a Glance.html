@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Agentic AI Engineering Toolkit: The Book at a Glance</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f3ec;--sf:#fff;--ink:#14243a;--mu:#55627a;--ln:#dcd6c8;--ac:#1f7a68;
+--c1:#2f6f8f;--c2:#3b5ba5;--c3:#2e7d5b;--c4:#7a4fa3;--c5:#b7791f;--sh:0 1px 2px rgba(20,36,58,.06),0 6px 18px rgba(20,36,58,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1b2d;--sf:#16263d;--ink:#eef1f6;--mu:#a3afc4;--ln:#2a3d5a;--ac:#4fc3a8;
+--c1:#5fb0d4;--c2:#7e9be0;--c3:#58c08d;--c4:#b18be0;--c5:#f0b44c;--sh:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{--bg:#0f1b2d;--sf:#16263d;--ink:#eef1f6;--mu:#a3afc4;--ln:#2a3d5a;--ac:#4fc3a8;
+--c1:#5fb0d4;--c2:#7e9be0;--c3:#58c08d;--c4:#b18be0;--c5:#f0b44c;--sh:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25)}
+html{height:100%;scroll-padding-top:64px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;min-height:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
+.w{max-width:1100px;margin:0 auto;padding:0 18px}
+header{background:#0f2540;color:#fff;padding:38px 0 30px;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#1f7a68,#e0b04d,#7a4fa3) 1}
+.eb{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#e0b04d;font-weight:700}
+header h1{font-size:clamp(26px,4.4vw,44px);margin:10px 0}header p{max-width:760px;margin:0;color:#c9d3e3}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:22px}
+.st div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 13px}
+.st b{display:block;font:700 26px/1.1 Georgia,serif}.st span{font-size:12px;color:#b9c6da;line-height:1.3;display:block;margin-top:3px}
+nav{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--ln);padding-top:env(safe-area-inset-top,0px)}
+nav .w{display:flex;gap:4px;overflow-x:auto;padding-top:7px;padding-bottom:7px;align-items:center}
+nav a{white-space:nowrap;text-decoration:none;font-size:13px;font-weight:700;color:var(--mu);padding:6px 11px;border-radius:99px}
+nav a:hover{background:var(--sf);color:var(--ink)}
+nav button{margin-left:auto;border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:99px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer}
+section{padding:34px 0 4px}section h2{font-size:26px;margin-bottom:6px}.lede{color:var(--mu);margin:0 0 18px;max-width:800px}
+.box{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:16px;box-shadow:var(--sh)}
+.bar{display:flex;height:70px;border-radius:10px;overflow:hidden;gap:2px;background:var(--ln)}
+.seg{border:0;color:#fff;font:700 12px/1.2 inherit;cursor:pointer;overflow:hidden;padding:4px;text-align:center;min-width:0}
+.seg small{display:block;font-weight:400;opacity:.9}
+.key{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:13px;color:var(--mu)}.key i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:14px;margin-bottom:10px;box-shadow:var(--sh);border-left:6px solid var(--k)}
+summary{cursor:pointer;padding:13px 16px;list-style:none;display:flex;gap:12px;align-items:center;flex-wrap:wrap}summary::-webkit-details-marker{display:none}
+summary .n{font:700 22px Georgia,serif;color:var(--k);min-width:36px}summary b{font-size:17px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--k);border-radius:99px;padding:3px 9px;margin-left:auto}
+.body{padding:0 16px 16px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.body h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.body ol{margin:0;padding-left:20px}.body p{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.card{background:var(--sf);border:1px solid var(--ln);border-top:5px solid var(--k);border-radius:12px;padding:13px;box-shadow:var(--sh)}
+.card h3{font-size:17px;color:var(--k)}.card p{margin:6px 0 0;font-size:14px;color:var(--mu)}.card b{color:var(--ink)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.chip{border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:99px;padding:5px 12px;font-size:13px;font-weight:700;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+input{border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:10px;padding:7px 11px;font:inherit;font-size:14px;min-width:200px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;background:var(--sf)}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--ln);vertical-align:top}th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;background:var(--k)}
+footer{padding:26px 0 40px;color:var(--mu);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="w">
+<div class="eb">Book 2 · First full edition · November 2026</div>
+<h1>The Agentic AI Engineering Toolkit: The Book at a Glance</h1>
+<p>Build, test, govern and release AI agents. Five parts, ten chapters, ten labs that run, and one maturity spine from Crawl to Autonomous. Tap any chapter to open it.</p>
+<div class="st" id="stats"></div>
+</div></header>
+<nav><div class="w"><a href="#pano">Panorama</a><a href="#chapters">Chapters</a><a href="#spine">The spine</a><a href="#fail">Failure modes</a><a href="#back">Appendices</a><a href="#start">Where to start</a><button id="th" type="button">Dark / light</button></div></nav>
+
+<section id="pano"><div class="w"><h2>Panorama: the book by lab</h2>
+<p class="lede">Each segment is one chapter, drawn to scale by the lines of lab code it ships with. Click a segment to jump to its chapter.</p>
+<div class="box"><div class="bar" id="bar"></div><div class="key" id="key"></div></div></div></section>
+
+<section id="chapters"><div class="w"><h2>Chapter by chapter</h2>
+<p class="lede">Every chapter has five numbered sections, one lab, and a checklist. Each is built around one decision you must make and one failure you should expect.</p>
+<div id="chs"></div></div></section>
+
+<section id="spine"><div class="w"><h2>The maturity spine</h2>
+<p class="lede">The same five stages run through this book and the WAF Handbook 2026. They describe how much an agent may do alone. Four actions stay human at every level: deploy to main, delete data, send data outside, state a root cause as fact.</p>
+<div class="cards" id="sp"></div></div></section>
+
+<section id="fail"><div class="w"><h2>Failure-mode catalogue</h2>
+<p class="lede">The twelve failures the book names, the control for each, and the lab where you can see it happen. Filter by stage or search.</p>
+<div class="tools" id="tools"></div>
+<div class="box tw"><table><thead><tr><th>Failure</th><th>Ch.</th><th>The control</th><th>Lab</th></tr></thead><tbody id="fb"></tbody></table></div></div></section>
+
+<section id="back"><div class="w"><h2>Front and back matter</h2>
+<div class="box"><table><tbody id="bm"></tbody></table></div></div></section>
+
+<section id="start"><div class="w"><h2>Where to start, by role</h2>
+<div class="cards" id="rl"></div></div></section>
+
+<footer><div class="w">Built from <i>The Agentic AI Engineering Toolkit</i>, first full edition, and the companion notebook <i>Agentic_AI_Engineering_Toolkit_Labs.ipynb</i>. All ten labs passed their own checks in a Jupyter kernel before this edition was written; run them once in your own Colab before you teach. Lab code lines count non-blank, non-comment lines. The labs use a deterministic planner and invented teaching data.</div></footer>
+
+<script>
+var S={1:["Crawl","#2f6f8f","L0"],2:["Walk","#3b5ba5","L1"],3:["Run","#2e7d5b","L2, L3"],4:["Fly","#7a4fa3","L3 at scale"],5:["Autonomous","#b7791f","L4"]};
+var CH=[
+{n:1,p:1,t:"The agent loop",l:23,d:"How many steps may the agent take, and who owns that number?",f:"A loop that never ends.",s:["An agent is a loop","Chatbot, workflow, agent","Anatomy of an agent","The loop in code","Stop rules are a design decision"],o:"Two tool calls, a grounded answer, a step limit."},
+{n:2,p:1,t:"Tools that do not break",l:28,d:"What risk class does each tool carry, and who may call it?",f:"The model invents arguments that look plausible.",s:["A tool is a contract","Six rules for a good tool","Validation in code","Risk classes","Naming and describing tools"],o:"Four bad calls come back as data, not crashes."},
+{n:3,p:2,t:"Retrieval and memory",l:12,d:"Below what match score should the agent refuse to answer?",f:"A confident answer with no source.",s:["Retrieve, then answer","How retrieval works","Abstaining is a feature","Setting the threshold","Memory without magic"],o:"RB-01 found at 0.53; the nonsense query refused."},
+{n:4,p:2,t:"Evals are unit tests for agents",l:27,d:"What pass rate must a change reach before it ships?",f:"Shipping on a good feeling after three demos.",s:["Why agents need evals","The golden set","Running the suite","What to measure","Evals in the release process"],o:"Healthy build 8 of 8; broken log tool 2 of 8."},
+{n:5,p:3,t:"Orchestration as a graph",l:38,d:"At which steps must a human decide before the run continues?",f:"A run that crashes half-way and cannot resume.",s:["From loop to graph","The five parts of a graph","The graph in code","Pausing for a human","Frameworks and when to use one"],o:"Paused at propose; resumed after approval; checkpoints kept."},
+{n:6,p:3,t:"Guardrails that survive prompt injection",l:25,d:"What happens to a tool the policy has never heard of?",f:"Safety that lives only in the prompt.",s:["The model is not the control","Prompt injection through tool output","The policy engine","Layers, not a single wall","Designing the approval"],o:"The injected delete_database call is denied by policy."},
+{n:7,p:4,t:"Supervisors, workers and tool protocols",l:24,d:"One agent or several?",f:"One agent’s mistake becomes the next agent’s fact.",s:["Why split at all","The supervisor pattern","Contracts between agents","A tool protocol","What several agents cost"],o:"Four of six services have fixes, all awaiting a human."},
+{n:8,p:4,t:"Observability, cost and replay",l:22,d:"What do you record, for how long, and what do you redact?",f:"An incident with no trace to read.",s:["If you cannot see it, you cannot run it","Spans","Cost per task","Replay","What to record, and what not to"],o:"Three spans, 95 ms, 85 tokens; an identical re-run replays identically."},
+{n:9,p:5,t:"Runtime governance: the path, not just the step",l:32,d:"Where do the escalate and block thresholds sit, and who handles an escalation?",f:"Every step safe, the sequence not.",s:["Safe steps, unsafe sequence","Signals and thresholds","Three controls, four scenarios","The honest cost","Replayable decisions"],o:"Attack blocked; benign twin allowed; two grey cases escalated."},
+{n:10,p:5,t:"Releasing and operating an agent",l:22,d:"Who may withdraw an agent’s autonomy, and how fast?",f:"Autonomy granted once and never reviewed.",s:["Agents propose; people and gates merge","The release gate","The canary","Autonomy is granted per task and can be withdrawn","Running agents day to day"],o:"Bad change stopped at the gate; faulty canary rolled back at 50%."}];
+var FM=[["Endless loop",1,1,"Step limit, repeated-call check",1],["Invented arguments",2,1,"Schema validation with closed choices",2],["Confident answer, no source",3,2,"Cite or abstain",3],["Shipping on a feeling",4,2,"Golden set with a written pass bar",4],["Lost state",5,3,"Checkpoints after every node",5],["Safety only in the prompt",6,3,"Policy engine outside the model",6],["Prompt injection via tool output",6,3,"Treat output as data; deny by default",6],["Error amplification",7,4,"Typed records with evidence and a score floor",7],["No trace",8,4,"Spans, replay and retention",8],["Safe steps, unsafe sequence",9,5,"Path-aware governor",9],["Friction ignored",9,5,"State the friction; tune with evidence",9],["Autonomy granted once",10,5,"Register, tripwire, named owner",10]];
+var BM=[["Front","Title page, How to use this book, The maturity spine, How the book is organised, The scenario used in every lab"],["Appendix A","Running the labs, and how a real model plugs in"],["Appendix B","Tool risk register template"],["Appendix C","Failure-mode catalogue (twelve rows)"],["Appendix D","Release-gate checklist"],["Appendix E","Golden-set template"],["Appendix F","Edition notes: what this edition does not yet include"],["Back","What you have built (ten-lab scorecard), About the author"]];
+var RL=[["Builders",1,"Chapters 1 and 2, Labs 1 and 2: your first agent in an afternoon."],["Tech leads",3,"Chapters 3, 4 and 6: make it right, prove it, fence it."],["Architects and risk",5,"Chapters 6, 9 and 10: policy, governance and release control."],["Professors",2,"One chapter and one lab per session; the failure catalogue as the syllabus."]];
+var $=function(i){return document.getElementById(i)};
+var tot=CH.reduce(function(a,c){return a+c.l},0);
+$("stats").innerHTML=[["5","parts"],["10","chapters"],["10 of 10","labs passed"],[tot,"lines of lab code"],["6","appendices"],["0","keys or installs"]].map(function(x){return "<div><b>"+x[0]+"</b><span>"+x[1]+"</span></div>"}).join("");
+$("bar").innerHTML=CH.map(function(c){return "<button class=seg type=button style=\"flex:"+c.l+";background:"+S[c.p][1]+"\" data-go=c"+c.n+" title=\"Chapter "+c.n+": "+c.t+"\">"+c.n+"<small>"+c.l+" lines</small></button>"}).join("");
+$("key").innerHTML=Object.keys(S).map(function(k){return "<span><i style=\"background:"+S[k][1]+"\"></i>Part "+({1:"I",2:"II",3:"III",4:"IV",5:"V"})[k]+" · "+S[k][0]+"</span>"}).join("");
+$("chs").innerHTML=CH.map(function(c){var s=S[c.p];return "<details id=c"+c.n+" style=\"--k:"+s[1]+"\"><summary><span class=n>"+c.n+"</span><b>"+c.t+"</b><span class=tag>"+s[0]+" · "+s[2]+"</span></summary><div class=body><div><h4>Sections</h4><ol>"+c.s.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ol></div><div><h4>The decision</h4><p>"+c.d+"</p><h4 style=\"margin-top:12px\">The failure to expect</h4><p>"+c.f+"</p></div><div><h4>Lab "+c.n+" · "+c.l+" lines</h4><p>"+c.o+"</p></div></div></details>"}).join("");
+$("sp").innerHTML=Object.keys(S).map(function(k){var ch=CH.filter(function(c){return c.p==k}).map(function(c){return c.n}).join(" and ");return "<div class=card style=\"--k:"+S[k][1]+"\"><h3>"+S[k][0]+"</h3><p><b>"+S[k][2]+"</b></p><p>Chapters "+ch+"</p></div>"}).join("");
+$("rl").innerHTML=RL.map(function(r){return "<div class=card style=\"--k:"+S[r[1]][1]+"\"><h3>"+r[0]+"</h3><p>"+r[2]+"</p></div>"}).join("");
+$("bm").innerHTML=BM.map(function(r){return "<tr><td><b>"+r[0]+"</b></td><td>"+r[1]+"</td></tr>"}).join("");
+var cur=0,q="";
+function draw(){$("fb").innerHTML=FM.filter(function(r){return(!cur||r[2]==cur)&&(r[0]+" "+r[3]).toLowerCase().indexOf(q)>-1}).map(function(r){return "<tr style=\"--k:"+S[r[2]][1]+"\"><td><span class=dot></span>"+r[0]+"</td><td>"+r[1]+"</td><td>"+r[3]+"</td><td>"+r[4]+"</td></tr>"}).join("")||"<tr><td colspan=4>No match.</td></tr>"}
+$("tools").innerHTML="<button class=chip type=button aria-pressed=true data-p=0>All</button>"+Object.keys(S).map(function(k){return "<button class=chip type=button aria-pressed=false data-p="+k+">"+S[k][0]+"</button>"}).join("")+"<input id=q placeholder=\"Search failures\" aria-label=\"Search failures\">";
+$("tools").addEventListener("click",function(e){var p=e.target.getAttribute&&e.target.getAttribute("data-p");if(p===null)return;cur=+p;[].forEach.call($("tools").querySelectorAll(".chip"),function(b){b.setAttribute("aria-pressed",b===e.target)});draw()});
+$("q").addEventListener("input",function(e){q=e.target.value.toLowerCase();draw()});
+$("bar").addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-go]");if(!b)return;var d=$(b.getAttribute("data-go"));d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"})});
+$("th").addEventListener("click",function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")});
+draw();
+</script>
+</body>
+</html>
